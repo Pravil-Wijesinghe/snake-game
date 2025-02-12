@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "cppbuild",
+        "label": "Build SFML",
+        "command": "g++",
+        "args": [
+          "-std=c++17",
+          "-g",
+          "-IC:/SFML-2.6.0/include",
+          "-L${workspaceFolder}/lib",
+          "-LC:/SFML-2.6.0/lib",
+          "${file}",
+          "-o",
+          "${fileDirname}/bin/main.exe",
+          "-lsfml-graphics",
+          "-lsfml-window",
+          "-lsfml-system",
+          "-lsfml-audio",
+          "-lwinmm",
+          "-lgdi32",
+          "-lopengl32"
+        ],
+        "options": {
+          "cwd": "C:/msys64/mingw64/bin"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
